@@ -1,0 +1,197 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<main>
+		<section id="buttons">
+			<img src="https://www.pensa.club/images/map/pensamap2.png">
+			<div class="blocks">
+				<h4>Умения</h4>
+				<button>KKKKKKKK</button>
+			</div>
+			<div class="blocks">
+				<h4>Профеция</h4>
+				<button>KKKKKKKK</button>
+			</div>
+			<div class="blocks">
+				<h4>Интереси</h4>
+				<button>KKKKKKKK</button>
+			</div>
+
+		</section>
+		<section id="map">
+			<div id="mapComponent">
+				<p>Space for the map</p>
+			</div>
+			 
+
+			<div class="pc-vertical">
+				
+				<div id="otherComponent" class="pc-vertical">
+					<p>dygjdkcxytufszc</p>
+					<button onclick="ButtonOnClick()">Go to Sofia</button>
+					<button onclick="ButtonOnClick2()">Go to Softuni</button>
+
+				</div>
+				<div class="flexStuff">
+					<input id="latCoordinates" value="23" />
+					<input id="longCoordinates" value="42" />
+					<input id="captionValue" value="caption" />
+					<button onclick="SaveCoordinates()">Save</button>
+				</div>
+			</div>
+			
+			
+
+		</section>
+
+		<input id="inputChat" onkeyup="CheckTheButtonPressed(event)" value="ask" style="width: 900px;" />
+</div>
+
+@section Scripts {
+
+	<!-- Leaflet JS -->
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+	<script>
+			function SaveCoordinates(lat, long, caption)
+			{
+				lat = document.getElementById("latCoordinates").value;
+				long = document.getElementById("longCoordinates").value;
+				caption = document.getElementById("captionValue").value;
+
+				fetch("/api/Save", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						Lat: Number(lat),
+						Longtitude: Number(long),
+						Caption: String(caption)
+					})
+				})
+				.then(response => response.json())
+				.then(data => {
+					console.log("done");
+				});
+			}
+
+			// Initialize the map and set its view to a chosen geographical point and zoom level
+			var map = L.map('mapComponent')
+				.setView([42.6977, 23.3219], 2);
+
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 19,
+				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+
+			// Hook into the moveend event
+			map.on('moveend', function () {
+				var center = map.getCenter(); // Get the center of the map
+				console.log("Current Latitude: " + center.lat + ", Longitude: " + center.lng);
+				document.getElementById("latCoordinates").value = center.lat;
+				document.getElementById("longCoordinates").value = center.lng;
+			});
+
+			// Optional: Hook into other events like zoomend
+			map.on('zoomend', function () {
+				var center = map.getCenter();
+				console.log("Zoomed! Current Latitude: " + center.lat + ", Longitude: " + center.lng);
+				document.getElementById("latCoordinates").value = center.lat;
+				document.getElementById("longCoordinates").value = center.lng;
+			});
+
+
+
+
+			function ShowOnMap(coordinates, radius, message){
+				map.setView(coordinates, radius)
+
+				L.marker(coordinates).addTo(map)
+					.bindPopup(message)
+					.openPopup();
+			}
+
+			function ButtonOnClick(){
+
+				fetch("/Api/Map", { method: "post" })
+				.then(response => {
+					if (!response.ok) {
+						throw new Error("Network response was not ok");
+					}
+					return response.json(); // Process the response as JSON
+				})
+				.then(data => {
+					const place = data[0];
+					ShowOnMap(place.coordinates, place.radius, place.message);
+				})
+				.catch (error => {
+					console.error("There was a problem with the fetch operation:", error);
+				});
+			}
+
+			function ButtonOnClick2() {
+
+				fetch("/Api/Map2", { method: "post" })
+					.then(response => {
+						if (!response.ok) {
+							throw new Error("Network response was not ok");
+						}
+						return response.json(); // Process the response as JSON
+					})
+					.then(data => { ShowOnMap(data.coordinates, data.radius, data.message); })
+					.catch(error => {
+						console.error("There was a problem with the fetch operation:", error);
+					});
+			}
+
+
+			let otherData;
+
+			function HandleOnClick(index){
+				debugger;
+					ShowOnMap(otherData[index].coordinates, otherData[index].radius, otherData[index].message);
+			}
+
+
+			function ShowDataMap(data) {
+				document.getElementById("otherComponent").innerHTML = "";
+				otherData = data;
+				for(let i = 0; i < data.length; i++){
+					document.getElementById("otherComponent").innerHTML += `<button onclick="HandleOnClick(${i})">${data[i].message}</button>`;
+				}
+			}
+
+
+
+			function CheckTheButtonPressed(event) {
+				if(event.key === "Enter"){
+				let text = document.getElementById('inputChat').value;
+
+				fetch("/api/Chat", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						Message: String(text)
+					})
+				})
+				.then(response => response.json())
+				.then(data => {
+					ShowOnMap(data.coordinates, data.radius, data.message);
+
+				});
+				}
+			}
+
+
+
+
+		document.getElementById("otherComponent").innerHTML = "Loading...";
+
+		fetch("/api/map", { method: 'POST' })
+			.then((res) => res.json())
+			.then((data) => ShowDataMap(data));
+
+
+	</script>
+}
