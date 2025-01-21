@@ -1,0 +1,113 @@
+:root{
+    --orange: #e26020;
+    --green: #1b6d4d;
+    --red: #c21414;
+    --gray: #333;
+
+    --pink1: #7d636d;
+    --pink2: #b29da0;
+    --pink3: #5f4b53;
+    --pink4: #ac8d84;
+
+    --pink3-rgb: 95, 75, 83;
+
+    --brown1: #6a6161;
+    --brown2: #7b6760;
+
+    --blue1: #93abcf;
+    --blue2: #6e8ab4;
+
+    --light-gray: #808080;
+    --white80: hsl(0, 0%, 80%);
+    --white1:hsl(0, 0%, 97%);
+    --white2:hsl(0, 0%, 95%);
+    
+
+    --small-text: 1.4rem;
+    --medium-text: 2rem;
+    --big-text: 2.6rem;
+
+    --screen-width-for-img: calc(100vh - 80px);
+
+}
+
+body{
+    font-family: sans-serif;
+    background: hsl(0, 0%, 97%);
+    padding: 0;
+    margin: 0;
+
+    margin-top: 80px;
+}
+
+/* --- NAV --- */
+nav{
+    position: fixed;
+    display: flex;
+    background-color: var(--white1);
+    box-shadow: 0 0 30px gray;
+    height: 80px;
+    width: 100%;
+    top:0;
+    z-index: 100;
+    box-shadow: 0 0 20px var(--pink1);
+}
+nav .logo img{
+    height: 32px;
+    position: absolute;
+    top:24px;
+    left: 172px;
+}
+nav .logo h2{
+    position: absolute;
+    color: var(--pink1);
+    font-size: var(--medium-text);
+    top: -4px;
+    left: 222px;
+}
+nav .pages{
+    position: absolute;
+    display: flex;
+    right: 400px;
+    top: 25px;
+}
+nav .pages li{
+    list-style: none;
+    padding-left: 50px;
+}
+nav .pages a{
+    text-decoration: none;
+    color: var(--gray);
+    font-size: var(--medium-text);
+}
+nav .user img{
+    position: absolute;
+    top: 16px;
+    right: 188px;
+    border-radius: 50%;
+    border: 4px solid var(--pink2);
+    height: 38px;
+}
+nav .pages a {
+    position: relative; 
+    text-decoration: none;
+    color: var(--gray);
+    font-size: var(--medium-text);
+}
+nav .pages a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;   
+    left: 0;
+    width: 0%;
+    height: 3px; 
+    border-radius: 50px;         
+    background-color: var(--pink1);
+    transition: width 0.3s ease-in-out;
+}
+nav .pages a:hover {
+    color: var(--pink1); 
+}
+nav .pages a:hover::after {
+    width: 100%;
+}
