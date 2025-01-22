@@ -1,0 +1,208 @@
+@import url(./styles.css);
+
+/* -- TOP --  Headers*/ 
+.top{
+    padding-left: 200px;
+    padding-top: 60px;
+}
+
+.top h2{
+    font-size: var(--medium-text);
+    color: var(--pink3);
+    margin: 0;
+    margin-bottom: 10px;
+}
+.top h1{
+    font-size: var(--big-text);
+    color: var(--pink1);
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+/* -- ImageSection -- image*/
+
+.ImageSection{
+    display: flex;
+    padding-left: 100px;
+}
+
+.ImageSection img{
+    height: 500px;
+    border: 10px solid var(--pink2);
+    border-radius: 30px;
+
+    box-shadow: 0 0 15px var(--pink3);
+}
+
+.ImageSection .CardsSection{
+    display: flex;
+    gap: 30px;
+    margin-left: 50px;
+}
+
+.ImageSection .card{
+    position: relative;
+
+    border: 10px solid var(--pink2);
+    border-radius: 30px;
+    width: 200px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    height: 280px;
+
+    box-shadow: 0 0 15px var(--pink3);
+}
+
+
+.ImageSection .card h1{
+    color: var(--pink3);
+    margin: 0;
+    padding-top: 15px;
+    font-size: var(--medium-text);
+}
+
+.ImageSection .card p{
+    position: absolute;
+
+    top: 210px;
+    padding: 0 22px;
+    color: var(--gray);
+
+    color: var(--small-text);
+}
+
+.card svg{
+    height: 100px;
+    
+}
+.card svg path{
+    fill: var(--pink1);
+}
+.card:nth-child(1) svg path ,.card:nth-child(3) svg path {
+    stroke: var(--pink1);
+}
+
+
+
+/* -- videoSection -- video*/
+
+.videoSection{
+    position: relative;
+
+    background-color: #c59da375;
+    height: 600px;
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    padding-left: 160px;
+}
+.videoSection .left{
+    margin-top: 130px;
+    font-size: var(--big-text);
+
+    box-shadow: 0 0 15px var(--pink3);
+
+    background-color: var(--pink2);
+    border-radius: 30px;
+    padding: 30px;
+
+    height: 350px;
+}
+.videoSection .left button{
+    border: none;
+    box-shadow: 0 0 15px var(--pink3);
+    font-size: var(--medium-text);
+    color:var(--pink1);
+    background-color: var(--white1);
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+.videoSection .frame{
+    position: absolute;
+    margin-left: 780px;
+    padding-top: 40px;
+    
+}
+.videoSection h1{
+    color: var(--gray);
+    font-size: var(--medium-text);
+}
+
+.videoSection iframe{
+    border: 10px solid var(--pink2);
+    border-radius: 30px;
+
+    box-shadow: 0 0 15px var(--pink3);
+}
+
+
+/* -- mission -- */
+
+.mission{
+    margin-top: 100px;
+    margin-left: 400px;
+
+    margin-bottom: 300px;
+
+    background-color: var(--pink2);
+    padding: 50px;
+    border-radius: 30px;
+    
+    box-shadow: 0 0 15px var(--pink2);
+
+    width: 800px;
+}
+
+.mission h2{
+    font-size: var(--big-text);
+    color:var(--white1);
+    text-shadow: 0 0 15px var(--gray);
+    margin-left: 60px;
+    margin-bottom: 15px;
+}
+
+.mission p{
+    font-size: var(--small-text);
+    color:var(--gray);
+    margin: 30px 0px;
+
+}
+
+.mission .btns{
+    margin-top: 50px;
+}
+
+button.JoinClub{
+
+    border: none;
+    box-shadow: 0 0 15px var(--pink3);
+    font-size: var(--medium-text);
+    color:var(--white1);
+    background-color: var(--pink1);
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+
+button.InviteFriend{
+    border: none;
+    box-shadow: 0 0 15px var(--pink3);
+    font-size: var(--medium-text);
+    color:var(--pink1);
+    background-color: var(--white1);
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+
+.InviteFriend:hover {
+    background-color: #ff3366;
+}
+
+

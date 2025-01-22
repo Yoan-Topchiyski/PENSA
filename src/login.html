@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="loginstyless.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Влез в профила си</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Имейл:</label>
+                <input type="email" id="email" name="email" required placeholder="Въведете имейл">
+            </div>
+            <div class="form-group">
+                <label for="password">Парола:</label>
+                <input type="password" id="password" name="password" required placeholder="Въведете парола">
+            </div>
+            <button type="submit">Вход</button>
+            <p class="register-link">Нямате профил? <a href="/register">Регистрирайте се тук</a></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

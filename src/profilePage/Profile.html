@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensa Club</title>
+    <link rel="stylesheet" href="./profile.css">
+</head>
+<body>
+
+    <nav>
+
+        <div class="logo">
+            <a href="../Home.html">
+                <img src="../images/logo.png" alt="logo">
+                <h2>Pensa Club</h2>
+            </a>
+        </div>
+
+        <div class="pages">
+            <li><a href="">Карта</a></li>
+            <li><a href="">Общност</a></li>
+            <li><a href="./AddProduct.html">Добави Обява</a></li>
+        </div>
+
+        <div class="user">
+            <img src="../images/user-male.png" alt="user">
+        </div>
+
+    </nav>
+    
+    <main>
+        
+        <div class="user">
+
+            <div class="profile-info">
+
+                <div class="profile-pic">
+                    <img src="../images/profile-pic-woman1.png" alt="profile picture">
+                </div>
+                <div class="profil-text">
+                    <h1>Мария68</h1>
+                    <div class="data">
+                        <h2>3 обяви</h2>
+                        <h2>32 приятеля</h2>
+                    </div>
+                    <div class="btn">
+
+                    </div>
+                </div>
+
+
+                <button class="edit-profile">edit profile</button>
+
+            </div>
+
+            <div class="new-offer">
+                <a href="./AddProduct.html">
+                    <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" 
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 45.402 45.402" xml:space="preserve">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <g>
+                            <path d="M41.267,18.557H26.832V4.134C26.832,1.851,24.99,0,22.707,0
+                            c-2.283,0-4.124,1.851-4.124,4.135v14.432H4.141c-2.283,0-4.139,1.851-4.138,4.135
+                            c-0.001,1.141,0.46,2.187,1.207,2.934c0.748,0.749,1.78,1.222,2.92,1.222h14.453V41.27
+                            c0,1.142,0.453,2.176,1.201,2.922c0.748,0.748,1.777,1.211,2.919,1.211
+                            c2.282,0,4.129-1.851,4.129-4.133V26.857h14.435c2.283,0,4.134-1.867,4.133-4.15
+                            C45.399,20.425,43.548,18.557,41.267,18.557z"></path>
+                        </g>
+                    </g>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="sidebar-personal-info">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" value="Ivan" placeholder="Name">
+                </div>
+            
+                <div class="field">
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" name="surname" value="Ivananov" placeholder="Surname">
+                </div>
+            
+                <div class="field">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" value="Mladost 2, Sofia" placeholder="Address">
+                </div>
+            
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="ivan4o@gmail.com" placeholder="Email">
+                </div>
+                <div class="buttons">
+                    <button class="okButton">Ok</button>
+                    <button class="cancelButton">Cancel</button>
+                </div>
+            </div>
+            
+            <div class="devider"></div>
+
+        </div>
+
+        <div class="which-page-btn">
+            <button class="offers-page">Offers</button>
+            <button class="about-me-page">About me</button>
+        </div>
+        
+ 
+        <div class="offers">
+            <div class="offer">
+                <div class="box">
+
+                    <p class="title">Selling: chair</p>
+                    <hr>
+                    <img src="https://cdnb.artstation.com/p/marketplace/presentation_assets/003/451/105/large/file.jpg?1707553058">
+                    <h4>Sofia, Bulgaria</h4>
+                    <p class="description">
+                        Decriptiption: Sturdy vintage
+                        chair with minor wear.
+                    </p>
+                    <button class="price">20 лв.</button>
+                </div>
+                <div class="delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 64 64">
+                        <path d="M 28 7 C 25.243 7 23 9.243 23 12 L 23 15 L 13 15 C 11.896 15 11 15.896 11 17 C 11 18.104 11.896 19 13 19 L 15.109375 19 L 16.792969 49.332031 C 16.970969 52.510031 19.600203 55 22.783203 55 L 41.216797 55 C 44.398797 55 47.029031 52.510031 47.207031 49.332031 L 48.890625 19 L 51 19 C 52.104 19 53 18.104 53 17 C 53 15.896 52.104 15 51 15 L 41 15 L 41 12 C 41 9.243 38.757 7 36 7 L 28 7 z M 28 11 L 36 11 C 36.552 11 37 11.449 37 12 L 37 15 L 27 15 L 27 12 C 27 11.449 27.448 11 28 11 z M 19.113281 19 L 44.886719 19 L 43.212891 49.109375 C 43.153891 50.169375 42.277797 51 41.216797 51 L 22.783203 51 C 21.723203 51 20.846109 50.170328 20.787109 49.111328 L 19.113281 19 z M 32 23.25 C 31.033 23.25 30.25 24.034 30.25 25 L 30.25 45 C 30.25 45.966 31.033 46.75 32 46.75 C 32.967 46.75 33.75 45.966 33.75 45 L 33.75 25 C 33.75 24.034 32.967 23.25 32 23.25 z M 24.642578 23.251953 C 23.677578 23.285953 22.922078 24.094547 22.955078 25.060547 L 23.652344 45.146484 C 23.685344 46.091484 24.462391 46.835938 25.400391 46.835938 C 25.421391 46.835938 25.441891 46.835938 25.462891 46.835938 C 26.427891 46.801938 27.183391 45.991391 27.150391 45.025391 L 26.453125 24.939453 C 26.419125 23.974453 25.606578 23.228953 24.642578 23.251953 z M 39.355469 23.251953 C 38.388469 23.224953 37.580875 23.974453 37.546875 24.939453 L 36.849609 45.025391 C 36.815609 45.991391 37.571109 46.801938 38.537109 46.835938 C 38.558109 46.836938 38.578609 46.835938 38.599609 46.835938 C 39.537609 46.835938 40.314656 46.091484 40.347656 45.146484 L 41.044922 25.060547 C 41.078922 24.094547 40.321469 23.285953 39.355469 23.251953 z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="offer">
+                <div class="box">
+                    <p class="title">Buying: bowl</p>
+                    <hr>
+                    <img src="https://www.shutterstock.com/shutterstock/photos/2471947437/display_1500/stock-vector-kitchen-tools-in-a-minimal-format-2471947437.jpg">
+                    <h4>Sofia, Bulgaria</h4>
+                    <p class="description">
+                        Description: Looking to buy a durable kitcken bowl, any size.
+                    </p>
+                    <button class="price">10 лв.</button>
+                </div>
+                <div class="delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 64 64">
+                        <path d="M 28 7 C 25.243 7 23 9.243 23 12 L 23 15 L 13 15 C 11.896 15 11 15.896 11 17 C 11 18.104 11.896 19 13 19 L 15.109375 19 L 16.792969 49.332031 C 16.970969 52.510031 19.600203 55 22.783203 55 L 41.216797 55 C 44.398797 55 47.029031 52.510031 47.207031 49.332031 L 48.890625 19 L 51 19 C 52.104 19 53 18.104 53 17 C 53 15.896 52.104 15 51 15 L 41 15 L 41 12 C 41 9.243 38.757 7 36 7 L 28 7 z M 28 11 L 36 11 C 36.552 11 37 11.449 37 12 L 37 15 L 27 15 L 27 12 C 27 11.449 27.448 11 28 11 z M 19.113281 19 L 44.886719 19 L 43.212891 49.109375 C 43.153891 50.169375 42.277797 51 41.216797 51 L 22.783203 51 C 21.723203 51 20.846109 50.170328 20.787109 49.111328 L 19.113281 19 z M 32 23.25 C 31.033 23.25 30.25 24.034 30.25 25 L 30.25 45 C 30.25 45.966 31.033 46.75 32 46.75 C 32.967 46.75 33.75 45.966 33.75 45 L 33.75 25 C 33.75 24.034 32.967 23.25 32 23.25 z M 24.642578 23.251953 C 23.677578 23.285953 22.922078 24.094547 22.955078 25.060547 L 23.652344 45.146484 C 23.685344 46.091484 24.462391 46.835938 25.400391 46.835938 C 25.421391 46.835938 25.441891 46.835938 25.462891 46.835938 C 26.427891 46.801938 27.183391 45.991391 27.150391 45.025391 L 26.453125 24.939453 C 26.419125 23.974453 25.606578 23.228953 24.642578 23.251953 z M 39.355469 23.251953 C 38.388469 23.224953 37.580875 23.974453 37.546875 24.939453 L 36.849609 45.025391 C 36.815609 45.991391 37.571109 46.801938 38.537109 46.835938 C 38.558109 46.836938 38.578609 46.835938 38.599609 46.835938 C 39.537609 46.835938 40.314656 46.091484 40.347656 45.146484 L 41.044922 25.060547 C 41.078922 24.094547 40.321469 23.285953 39.355469 23.251953 z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="offer">
+                <div class="box">
+                    <p class="title">Selling: pillow</p>
+                    <hr>
+                    <img src="https://cdn4.vectorstock.com/i/1000x1000/59/98/bed-pillow-template-isolated-on-gray-background-vector-14745998.jpg">
+                    <h4>Sofia, Bulgaria</h4>
+                    <p class="description">
+                        Decriptiption: Soft gently-used pillow in great condition.
+                    </p>
+                    <button class="price">14 лв.</button>
+                </div>
+                <div class="delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 64 64">
+                        <path d="M 28 7 C 25.243 7 23 9.243 23 12 L 23 15 L 13 15 C 11.896 15 11 15.896 11 17 C 11 18.104 11.896 19 13 19 L 15.109375 19 L 16.792969 49.332031 C 16.970969 52.510031 19.600203 55 22.783203 55 L 41.216797 55 C 44.398797 55 47.029031 52.510031 47.207031 49.332031 L 48.890625 19 L 51 19 C 52.104 19 53 18.104 53 17 C 53 15.896 52.104 15 51 15 L 41 15 L 41 12 C 41 9.243 38.757 7 36 7 L 28 7 z M 28 11 L 36 11 C 36.552 11 37 11.449 37 12 L 37 15 L 27 15 L 27 12 C 27 11.449 27.448 11 28 11 z M 19.113281 19 L 44.886719 19 L 43.212891 49.109375 C 43.153891 50.169375 42.277797 51 41.216797 51 L 22.783203 51 C 21.723203 51 20.846109 50.170328 20.787109 49.111328 L 19.113281 19 z M 32 23.25 C 31.033 23.25 30.25 24.034 30.25 25 L 30.25 45 C 30.25 45.966 31.033 46.75 32 46.75 C 32.967 46.75 33.75 45.966 33.75 45 L 33.75 25 C 33.75 24.034 32.967 23.25 32 23.25 z M 24.642578 23.251953 C 23.677578 23.285953 22.922078 24.094547 22.955078 25.060547 L 23.652344 45.146484 C 23.685344 46.091484 24.462391 46.835938 25.400391 46.835938 C 25.421391 46.835938 25.441891 46.835938 25.462891 46.835938 C 26.427891 46.801938 27.183391 45.991391 27.150391 45.025391 L 26.453125 24.939453 C 26.419125 23.974453 25.606578 23.228953 24.642578 23.251953 z M 39.355469 23.251953 C 38.388469 23.224953 37.580875 23.974453 37.546875 24.939453 L 36.849609 45.025391 C 36.815609 45.991391 37.571109 46.801938 38.537109 46.835938 C 38.558109 46.836938 38.578609 46.835938 38.599609 46.835938 C 39.537609 46.835938 40.314656 46.091484 40.347656 45.146484 L 41.044922 25.060547 C 41.078922 24.094547 40.321469 23.285953 39.355469 23.251953 z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="offer">
+                <div class="box">
+                    <p class="title">Selling: charger</p>
+                    <hr>
+                    <img src="https://media.istockphoto.com/id/1422731147/vector/mobile-phone-charger-icon-sticker-on-gray-background.jpg?s=612x612&w=0&k=20&c=yEviZdbpQVtIuGNIfJmHkS9sug7UehEvLeagg6ysWF0=">
+                    <h4>Sofia, Bulgaria</h4>
+                    <p class="description">
+                        Decriptiption: Functional phone charger, slightly used.
+                    </p>
+                    <button class="price">16 лв.</button>
+                </div>
+                <div class="delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 64 64">
+                        <path d="M 28 7 C 25.243 7 23 9.243 23 12 L 23 15 L 13 15 C 11.896 15 11 15.896 11 17 C 11 18.104 11.896 19 13 19 L 15.109375 19 L 16.792969 49.332031 C 16.970969 52.510031 19.600203 55 22.783203 55 L 41.216797 55 C 44.398797 55 47.029031 52.510031 47.207031 49.332031 L 48.890625 19 L 51 19 C 52.104 19 53 18.104 53 17 C 53 15.896 52.104 15 51 15 L 41 15 L 41 12 C 41 9.243 38.757 7 36 7 L 28 7 z M 28 11 L 36 11 C 36.552 11 37 11.449 37 12 L 37 15 L 27 15 L 27 12 C 27 11.449 27.448 11 28 11 z M 19.113281 19 L 44.886719 19 L 43.212891 49.109375 C 43.153891 50.169375 42.277797 51 41.216797 51 L 22.783203 51 C 21.723203 51 20.846109 50.170328 20.787109 49.111328 L 19.113281 19 z M 32 23.25 C 31.033 23.25 30.25 24.034 30.25 25 L 30.25 45 C 30.25 45.966 31.033 46.75 32 46.75 C 32.967 46.75 33.75 45.966 33.75 45 L 33.75 25 C 33.75 24.034 32.967 23.25 32 23.25 z M 24.642578 23.251953 C 23.677578 23.285953 22.922078 24.094547 22.955078 25.060547 L 23.652344 45.146484 C 23.685344 46.091484 24.462391 46.835938 25.400391 46.835938 C 25.421391 46.835938 25.441891 46.835938 25.462891 46.835938 C 26.427891 46.801938 27.183391 45.991391 27.150391 45.025391 L 26.453125 24.939453 C 26.419125 23.974453 25.606578 23.228953 24.642578 23.251953 z M 39.355469 23.251953 C 38.388469 23.224953 37.580875 23.974453 37.546875 24.939453 L 36.849609 45.025391 C 36.815609 45.991391 37.571109 46.801938 38.537109 46.835938 C 38.558109 46.836938 38.578609 46.835938 38.599609 46.835938 C 39.537609 46.835938 40.314656 46.091484 40.347656 45.146484 L 41.044922 25.060547 C 41.078922 24.094547 40.321469 23.285953 39.355469 23.251953 z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <h3>
+                    Умения
+                </h3>
+                <ul>
+                    <li><input type="checkbox">Комуникационни умения</li>
+                    <li><input type="checkbox">Технически умения</li>
+                    <li><input type="checkbox">Селскостопански умения</li>
+                    <li><input type="checkbox">Готварски умения</li>
+                    <li><input type="checkbox">Финансови умения</li>
+                    <li><input type="checkbox">Езикови умения</li>
+                    <li><input type="checkbox">Музикални умения</li>
+                    <li><input type="checkbox">Умения за оказване на първа помощ</li>
+                    <li><input type="checkbox">Медитация</li>
+                    <li><input type="checkbox">Шивашки умения</li>
+                    <li><input type="checkbox">Дизайн и интериор</li>
+                    <li><input type="checkbox">Видео заснемане</li>
+
+                </ul>
+                <button class="more-btn">Добави +</button>
+                <button class="save-btn">Запази</button>
+            </div>  
+            <div class="card">
+                <h3>
+                    Професия            
+                </h3>
+                <ul>
+                    <li><input type="checkbox">Архитектура и строителство</li>
+                    <li><input type="checkbox">Медицина и здравеопазване</li>
+                    <li><input type="checkbox">Журналистика</li>
+                    <li><input type="checkbox">Преподаване и образование</li>
+                    <li><input type="checkbox">Публична администрация</li>
+                    <li><input type="checkbox">Сигурност</li>
+                    <li><input type="checkbox">Социална работа и туризъм</li>
+                    <li><input type="checkbox">Селско стопанство и земеделие</li>
+                    <li><input type="checkbox">Производство и търговия</li>
+                    <li><input type="checkbox">Инженерство и технологии</li>
+                    <li><input type="checkbox">Транспорт</li>
+                    <li><input type="checkbox">Юридически и счетоводни дейности</li>
+                </ul>
+                <button class="more-btn">Добави +</button>
+                <button class="save-btn">Запази</button>
+            </div>
+            <div class="card">
+                <h3>
+                    Интереси
+                </h3>
+                <ul>
+                    <li><input type="checkbox">Доброволчество</li>
+                    <li><input type="checkbox">Духовни практики и медитация</li>
+                    <li><input type="checkbox">Нови знания</li>
+                    <li><input type="checkbox">Настолни игри</li>
+                    <li><input type="checkbox">Земеделие и градинарство</li>
+                    <li><input type="checkbox">Филми</li>
+                    <li><input type="checkbox">Фотография</li>
+                    <li><input type="checkbox">Спорт</li>
+                    <li><input type="checkbox">Четене</li>
+                    <li><input type="checkbox">Готвене</li>
+                    <li><input type="checkbox">Пътуване и туризъм</li>
+                    <li><input type="checkbox">Музика</li>
+                    <li><input type="checkbox">Рисуване и изкуства</li>
+                    <li><input type="checkbox">Шиене и кройка</li>
+                </ul>
+                <button class="more-btn">Добави +</button>
+                <button class="save-btn">Запази</button>
+            </div>
+        </div>
+    
+
+        <div class="delete-popUp">
+            <div class="popUp-content">
+                <p>Are you sure you want to delete?</p>
+                <div class="buttons">
+                    <button class="okButton">Ok</button>
+                    <button class="cancelButton">Cancel</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <script src="./profilePage.js"></script>
+</body>
+</html>

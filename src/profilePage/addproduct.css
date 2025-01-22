@@ -1,0 +1,214 @@
+@import url(../styles.css);
+
+body {
+    font-family: sans-serif;
+    background-color: hsl(0, 0%, 90%);
+    height: 100vh;
+    margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: var(--big-text);
+    color: var(--gray);
+    text-align: center;
+    margin-bottom: 20px;
+    transform: translateX(-30px);
+}
+
+.side{
+    
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    display: none;
+}
+
+.side img{
+    width: 70px;
+}
+
+.side h2{
+    color: var(--pink1);
+    font-size: 30px;
+    margin: 0;
+}
+
+
+.addText{
+    margin-left: 100px;
+    position: relative;
+}
+svg.closeBtn{
+    position: absolute;
+    width: 45px;
+    top: 32px;
+    right: 50%;
+    transform: translateX(240px);
+
+}
+svg.closeBtn:hover path{
+    fill: var(--pink2); /* changed from var(--orange) */
+    transform: scale(1.05);
+}
+svg.closeBtn path{
+    fill: var(--pink1);
+}
+
+form {
+    background-color: var(--white2);
+    border: 2px solid var(--pink1);
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px var(--pink1);
+    width: calc(100% - 50px); /* Намаляване на ширината с 50px */
+    max-width: 450px; /* Предишната ширина - 50px */
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: var(--medium-text);
+    color: var(--gray);
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: var(--small-text);
+    border: 2px solid var(--white80);
+    border-radius: 30px;
+    background-color: var(--white80);
+    color: var(--gray);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--pink1); /* changed from var(--green) */
+    box-shadow: 0 0 5px var(--pink1); /* changed from var(--green) */
+}
+
+input[type="file"] {
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+input{
+    padding: 10px 20px;
+    max-width: 420px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: var(--medium-text);
+    color: var(--white1);
+    background-color: var(--pink1); /* changed from var(--orange) */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--pink1); /* changed from var(--green) */
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid var(--pink1); /* changed from var(--green) */
+    box-shadow: 0 0 8px var(--pink1); /* changed from var(--green) */
+}
+
+
+
+/* nav */
+nav{
+    position: relative;
+    display: flex;
+    background-color: var(--white1);
+    box-shadow: 0 0 20px var(--pink1);
+    height: 80px;
+}
+nav .logo h2{
+    position: absolute;
+    color: var(--pink1);
+    font-size: var(--medium-text);
+    top: 8px;
+    left: 222px;
+}
+nav .pages{
+    position: absolute;
+    display: flex;
+    right: 400px;
+    top: 25px;
+}
+nav .pages li{
+    list-style: none;
+    padding-left: 50px;
+}
+nav .pages a{
+    text-decoration: none;
+    color: var(--gray);
+    font-size: var(--medium-text);
+}
+nav .user img{
+    position: absolute;
+    top: 16px;
+    right: 188px;
+    border-radius: 50%;
+    border: 4px solid var(--pink2);
+    height: 38px;
+}
+
+/* devider */
+
+.devider{
+    content: "";
+    display: block;
+    width: 52vw;
+    height: 3px;
+    background-color: var(--light-gray);
+    margin-top: 2vw;
+    margin-left: 23vw;
+    border-radius: 10px;
+}
+
+
+/* Create a pseudo-element that acts as the underline */
+nav .pages a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px; 
+    border-radius: 50px;
+    background-color: var(--pink1);
+    transition: width 0.3s ease-in-out;
+}
+
+/* On hover: 
+   1) text color changes to pink
+   2) underline expands */
+nav .pages a:hover {
+    color: var(--pink1);
+}
+
+nav .pages a:hover::after {
+    width: 100%;
+}
