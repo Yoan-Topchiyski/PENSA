@@ -201,4 +201,8 @@ button.InviteFriend{
     margin-left: 20px;
 }
 
+.InviteFriend:hover {
+    background-color: #ff3366;
+}
+
 
