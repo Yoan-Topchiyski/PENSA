@@ -94,7 +94,7 @@
 .videoSection{
     position: relative;
 
-    background-color: #c59da375;
+    background-color: var(--pink4);
     height: 600px;
     width: 100%;
     margin-top: 60px;
@@ -150,7 +150,7 @@
 
     margin-bottom: 300px;
 
-    background-color: var(--pink2);
+    background-color: var(--white2);
     padding: 50px;
     border-radius: 30px;
     
@@ -162,7 +162,6 @@
 .mission h2{
     font-size: var(--big-text);
     color:var(--white1);
-    text-shadow: 0 0 15px var(--gray);
     margin-left: 60px;
     margin-bottom: 15px;
 }
@@ -184,7 +183,7 @@ button.JoinClub{
     box-shadow: 0 0 15px var(--pink3);
     font-size: var(--medium-text);
     color:var(--white1);
-    background-color: var(--pink1);
+    background-color: var(--pink4);
     border-radius: 30px;
     padding: 10px 20px;
     margin-left: 20px;

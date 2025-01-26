@@ -1,0 +1,194 @@
+﻿@import url(../../../../../styles.css);
+
+* {
+    font-family: sans-serif;
+   
+    
+}
+
+:root {
+    --primary-color: #E65100; /* Елегантно оранжево */
+    --secondary-color: #1565C0; /* Наситено синьо */
+    --third-color: #2C2C2C; /* Тъмно сиво */
+    --background-color: #F4F4F4; /* Лек сив фон */
+    --text-color: #333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+main {
+    padding-top: 20px;
+}
+
+
+header {
+    background-color: var(--third-color);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 24px;
+    padding: 15px;
+    color: white;
+}
+
+header p {
+    color: white;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+}
+
+
+nav {
+    background-color: white; 
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0 0 20px var(--pink1);
+    position: relative;
+    z-index: 100;
+}
+
+
+nav a {
+    color: var(--third-color);
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+
+
+
+#buttons {
+    margin-top: 20px; 
+    height: auto;
+    display: flex;
+    background-color: var(--secondary-color);
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.blocks {
+    text-align: center;
+}
+
+.blocks h4 {
+    margin-bottom: 10px;
+}
+
+.blocks button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+ 
+}
+
+.blocks button:hover {
+    background-color: #FF7043;
+}
+
+
+#map {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#mapComponent {
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+    width: 70%;
+    height: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#otherComponent {
+    background-color: var(--third-color);
+    border-radius: 15px;
+    padding: 20px;
+    width: 25%;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box select, .search-box input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    background: white;
+    color: var(--text-color);
+}
+
+.search-box button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.search-box button:hover {
+    background-color: #FF7043;
+}
+
+
+footer {
+    background-color: var(--third-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 0;
+}
+
+footer img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+
+.leaflet-routing-container {
+    display: none;
+}

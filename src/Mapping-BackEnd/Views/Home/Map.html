@@ -1,0 +1,171 @@
+﻿ <!DOCTYPE html>
+    <html lang="bg">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pensa Club</title>
+    <link rel="stylesheet" href="/src/Mapping-BackEnd/wwwroot/css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+        <link rel="stylesheet" href="/src/styles.css">
+
+
+    </head>
+<body>
+    
+    <nav>
+
+        <div class="logo">
+            <a href="/src/Home.html">
+                <img src="/src/images/logo.png" alt="logo">
+                <h2>Pensa Club</h2>
+            </a>
+        </div>
+
+        <div class="pages">
+            <li><a href="/src/Mapping-BackEnd/Views/Home/Map.html">Карта</a></li>
+            <li><a href="">Общност</a></li>
+            <li><a href="/src/profilePage/AddProduct.html">Добави Обява</a></li>
+        </div>
+
+        <div class="user">
+            <a href="/src/profilePage/Profile.html"><img src="/src/images/profile-pic.png" alt="user"></a>
+        </div>
+
+    </nav>
+    <div class="text-center">
+        <main>
+            <section id="buttons">
+                <img src="https://www.pensa.club/images/map/pensamap2.png" alt="PensaMap" style="height: 60px;">
+                <div class="blocks"><h4>Умения</h4><button onclick="handleClick('Умения')">Избери</button></div>
+                <div class="blocks"><h4>Професия</h4><button onclick="handleClick('Професия')">Избери</button></div>
+                <div class="blocks"><h4>Интереси</h4><button onclick="handleClick('Интереси')">Избери</button></div>
+            </section>
+
+            <section id="map">
+                <div id="mapComponent"></div>
+                <div class="pc-vertical">
+                    <div class="search-box">
+                        <h4>LOCATION</h4>
+                        <label for="fromLocation">From:</label>
+                        <select id="fromLocation">
+                            <option value="42.6977,23.3219">Sofia</option>
+                            <option value="42.636298364218916, 23.369755682097471">SoftUni</option>
+                        </select>
+                        <label for="toLocation">To:</label>
+                        <select id="toLocation">
+                            <option value="42.6977,23.3219">Sofia</option>
+                            <option value="42.636298364218916, 23.36975568209747">SoftUni</option>
+                        </select>
+                        <button id="findRouteBtn" onclick="updateCoordinates()">Find Route</button>
+                    </div>
+                    <div class="flexStuff">
+                        <input id="latCoordinates" placeholder="Latitude">
+                        <input id="longCoordinates" placeholder="Longitude">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('mapComponent').setView([42.6977, 23.3219], 10);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            var routingControl;
+
+            function updateCoordinates() {
+                const fromValue = document.getElementById("fromLocation").value.split(',');
+                const toValue = document.getElementById("toLocation").value.split(',');
+
+                const fromLat = parseFloat(fromValue[0]);
+                const fromLng = parseFloat(fromValue[1]);
+                const toLat = parseFloat(toValue[0]);
+                const toLng = parseFloat(toValue[1]);
+
+                if (isNaN(fromLat) || isNaN(fromLng) || isNaN(toLat) || isNaN(toLng)) {
+                    alert("Invalid coordinates. Please check your selection.");
+                    return;
+                }
+
+                if (routingControl) {
+                    map.removeControl(routingControl);
+                }
+
+                routingControl = L.Routing.control({
+                    waypoints: [
+                        L.latLng(fromLat, fromLng),
+                        L.latLng(toLat, toLng)
+                    ],
+                    routeWhileDragging: true,
+                    lineOptions: {
+                        styles: [{ color: 'blue', weight: 5, opacity: 0.7 }]
+                    },
+                    createMarker: function (i, waypoint) {
+                        return L.marker(waypoint.latLng, { draggable: false });
+                    }
+
+                }).addTo(map);
+
+                document.getElementById("latCoordinates").value = toLat;
+                document.getElementById("longCoordinates").value = toLng;
+
+                map.fitBounds(routingControl.getPlan().getWaypoints().map(wp => wp.latLng));
+            }
+
+            function SaveCoordinates() {
+                const lat = document.getElementById("latCoordinates").value;
+                const lng = document.getElementById("longCoordinates").value;
+                const caption = document.getElementById("captionValue").value;
+
+                if (!lat || !lng || !caption) {
+                    alert("Please fill in all fields before saving.");
+                    return;
+                }
+
+                fetch("/api/Save", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        Lat: parseFloat(lat),
+                        Longtitude: parseFloat(lng),
+                        Caption: caption
+                    })
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Failed to save coordinates.");
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        alert("Coordinates saved successfully!");
+                        console.log("Response:", data);
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        alert("Failed to save coordinates. Please try again.");
+                    });
+            }
+
+            document.getElementById("findRouteBtn").addEventListener("click", updateCoordinates);
+
+
+        });
+    
+
+
+
+    </script>
+</body>
+</html>
+
+

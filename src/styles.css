@@ -1,13 +1,24 @@
 :root{
-    --orange: #e26020;
-    --green: #1b6d4d;
-    --red: #c21414;
-    --gray: #333;
+    
+    
+        --primary-color: #E65100; /* Елегантно оранжево */
+        --secondary-color: #1565C0; /* Наситено синьо */
+        --third-color: #2C2C2C; /* Тъмно сиво */
+        --background-color: #F4F4F4; /* Лек сив фон */
+        --text-color: #333;
+    
+    
 
-    --pink1: #7d636d;
+    /* --pink1: #7d636d;
     --pink2: #b29da0;
     --pink3: #5f4b53;
-    --pink4: #ac8d84;
+    --pink4: #ac8d84; */
+
+    --pink1: #6d9773;
+    --pink: #0c3b1e;
+    --pink: #bb8a52;
+    --pink4: #5cb334a6;
+
 
     --pink3-rgb: 95, 75, 83;
 
