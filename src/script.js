@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const inviteButton = document.querySelector(".InviteFriend");
+    const joinClubButton = document.querySelector(".JoinClub");
+    const loginForm = document.getElementById("loginForm");
 
     if (inviteButton) {
         inviteButton.addEventListener("click", () => {
@@ -12,9 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-});
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.getElementById("loginForm");
+    
+    if(joinClubButton)
+    {
+        
+        joinClubButton.addEventListener("click", () => {
+            window.location.href = "login.html";
+            
+        });
+
+    }
+
+
+
 
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -30,5 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
 
 
