@@ -10,13 +10,14 @@ body{
     align-items: center;
     gap: 1vw;
     width: 100%;
+
 }
 
 .which-page-btn button {
     border: none;
     background-color: transparent;
     font-size: var(--small-text);
-    color: var(--light-gray);
+    color: var(--light-color);
     text-align: center;
     font-weight: 600;
     margin: 1vh 0;
@@ -24,12 +25,12 @@ body{
 }
 
 .which-page-btn .offers-page{
-    color: var(--gray);
+    color: var(--light-color);
 }
 
 
 .which-page-btn button.show{
-    color: var(--gray);
+    color: var(--text-color);
 }
 
 
@@ -38,8 +39,10 @@ body{
     display: none;
     justify-content: center;
     gap: 3vw;
-    margin-top: 4dvh;
-    margin-bottom: 200px;
+    background-color: var(--white3);
+    padding-bottom: 300px;
+    padding-top: 30px;
+    color: var(--text-color);
 }
 
 .cards.show {
@@ -47,7 +50,6 @@ body{
 }
 
 .card {
-    background-color: var(--white2);
     padding: 20px;
     border-radius: 20px;
     display: flex;
@@ -60,8 +62,9 @@ body{
     overflow: hidden;
     transition: max-height 0.3s ease, transform 0.3s ease;
     max-height: 30vh;
-    box-shadow: 0 0 10px var(--pink1);
     padding-top: 50px;
+
+    background-color: var(--white1);
 }
 
 .card.expanded {
@@ -94,23 +97,23 @@ body{
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--pink2);
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--primary-color);
     border-radius: 4px;
     cursor: pointer;
     position: relative;
     background-color: white;
+    padding-left: 3px;
+
 }
 
-
 input[type="checkbox"]:checked {
-    background-color:var(--pink2);
-    border-color: var(--pink2);
+    background-color:var(--primary-color);
 }
 input[type="checkbox"]:checked::after {
     content: '✔';
-    color: white;
+    color: var(--white1);
     font-size: 20px;
     position: absolute;
     top:-4px
@@ -120,7 +123,7 @@ input[type="checkbox"]:checked::after {
 .card .save-btn {
     border: none;
     border-radius: 10px;
-    background-color: var(--pink2);
+    background-color: var(--primary-color);
     color: white;
     width: 128px;
     cursor: pointer;
@@ -144,21 +147,15 @@ input[type="checkbox"]:checked::after {
 
 .card .more-btn:hover,
 .card .save-btn:hover {
-    background-color: var(--pink1);
     transform: scale(1.05);
 }
 
 .card .more-btn:active,
 .card .save-btn:active {
-    background-color: var(--pink3);
+    background-color: var(--third-color);
     transform: scale(0.95);
 }
 
-.card .more-btn:focus,
-.card .save-btn:focus {
-    outline: none;
-    box-shadow: 0 0 5px var(--pink1);
-}
 
 
 
@@ -191,13 +188,13 @@ input[type="checkbox"]:checked::after {
     line-height: var(--small-text);
 }
 .sidebar-personal-info .field input{
-    border: 2px solid var(--orange);
+    border: 2px solid var(--primary-color);
     border-radius: 10px;
     padding: 5px;
-    color: var(--gray);
+    color: var(--text-color);
 }
 .sidebar-personal-info .field label{
-    color: var(--gray);
+    color: var(--text-color);
 }
 .sidebar-personal-info button{
     border-radius: 10px;
@@ -212,6 +209,8 @@ input[type="checkbox"]:checked::after {
     gap: 20px;
     margin-right: 30px;
     margin-top: 20px;
+
+    
 }
 
 /* products */
@@ -288,19 +287,21 @@ input[type="checkbox"]:checked::after {
     width: 4vw;
 }
 button.okButton{
-    background-color: var(--orange);
+    background-color: var(--primary-color);
     color: var(--white2);
 
 }   
 
     /* box */
     .offers{
-        margin-top: 3%;
         width: 70%;
         justify-self: center;
         grid-template-columns: repeat(3, 1fr);
         gap: 4em;
         display: none;
+        background-color: var(--white3);
+        padding: 30px 30%;
+
     }
     .offers > *:nth-child(2):only-of-type {
         grid-column: span 2;
@@ -327,13 +328,13 @@ button.okButton{
     
     .offer{
         font-family: sans-serif;
-        
+        padding-bottom: 20px;
     }
     
     .box hr{
-        border: 5px solid;
+        border: 2px solid;
         border-radius: 30px;
-        border-color: var(--pink2);
+        border-color: var(--secondary-color);
         width:100%;
         margin-bottom: 20px;
     }
@@ -350,7 +351,7 @@ button.okButton{
     .title{
         text-align: center;
         margin-bottom: 0;
-        font-size: var(--middle-text);
+        font-size: var(--medium-text);
         font-weight: bold;
         padding-top: 5%;
     }
@@ -375,7 +376,7 @@ button.okButton{
         position: relative;
         width: 28%;
         font-weight: normal;
-        font-size: var(--box-text-size);
+        font-size: var(--small-text);
         bottom: 35%;
         font-weight: bold;
         margin-left: 3%;
@@ -407,7 +408,7 @@ button.okButton{
         border: none;
         border-radius: 30px;
         background-color: var(--white2);
-        color: var(--gray);
+        color: var(--primary-color);
     }
 
 /* profile */
@@ -423,7 +424,7 @@ button.okButton{
 }
 .user .profile-pic img{
     border-radius: 50%;
-    border: 10px solid var(--pink2);
+    border: 10px solid var(--secondary-color);
     height: 29vh;
     margin-left: 5vw;
 }
@@ -446,7 +447,9 @@ button.okButton{
     gap: 1vw;
 }
 .user button.edit-profile:hover{
-    background-color: var(--light-gray);
+    background-color: var(--primary-color);
+    color: var(--white1);
+    transform: scale(1.05);
 }
 .user .profile-info .edit-profile{
     position: absolute;
@@ -461,6 +464,8 @@ button.okButton{
     width: 12vw;
     border-radius: 30px;
     background-color: var(--white80);
+
+    transition: transform 0.5s ease, background-color 0.3s ease;
 }
 .user .new-offer svg{
     margin-top: 4vh;
@@ -469,7 +474,7 @@ button.okButton{
     background-color: var(--white80);
     padding: 15px;
     border-radius: 50%;
-    fill: var(--pink3);
+    fill: var(--secondary-color);
 }
 
 /* devider */
