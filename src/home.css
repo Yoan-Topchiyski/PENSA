@@ -4,17 +4,18 @@
 .top{
     padding-left: 200px;
     padding-top: 60px;
+
 }
 
 .top h2{
     font-size: var(--medium-text);
-    color: var(--pink3);
+    color: var(--text-color);
     margin: 0;
     margin-bottom: 10px;
 }
 .top h1{
     font-size: var(--big-text);
-    color: var(--pink1);
+    color: var(--text-color);
     margin: 0;
     margin-bottom: 20px;
 }
@@ -23,27 +24,26 @@
 
 .ImageSection{
     display: flex;
-    padding-left: 100px;
+    padding-left: 140px;
+    padding-top: 30px;
 }
 
 .ImageSection img{
     height: 500px;
-    border: 10px solid var(--pink2);
+    border: 6px solid var(--primary-color);
     border-radius: 30px;
-
-    box-shadow: 0 0 15px var(--pink3);
 }
 
 .ImageSection .CardsSection{
     display: flex;
     gap: 30px;
-    margin-left: 50px;
+    margin-left: 60px;
 }
 
 .ImageSection .card{
     position: relative;
 
-    border: 10px solid var(--pink2);
+    border: 6px solid var(--primary-color);
     border-radius: 30px;
     width: 200px;
     padding: 20px;
@@ -55,7 +55,6 @@
 
     height: 280px;
 
-    box-shadow: 0 0 15px var(--pink3);
 }
 
 
@@ -81,10 +80,10 @@
     
 }
 .card svg path{
-    fill: var(--pink1);
+    fill: var(--secondary-color);
 }
 .card:nth-child(1) svg path ,.card:nth-child(3) svg path {
-    stroke: var(--pink1);
+    stroke: var(--secondary-color);
 }
 
 
@@ -93,21 +92,19 @@
 
 .videoSection{
     position: relative;
-
-    background-color: var(--pink4);
-    height: 600px;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    height: 800px;
     width: 100%;
     margin-top: 60px;
     display: flex;
-    padding-left: 160px;
+    padding-left: 260px;
 }
 .videoSection .left{
     margin-top: 130px;
     font-size: var(--big-text);
-
-    box-shadow: 0 0 15px var(--pink3);
-
-    background-color: var(--pink2);
+    background-color: var(--white1);
+    box-shadow: 0 0 30px var(--dark-color);
     border-radius: 30px;
     padding: 30px;
 
@@ -115,17 +112,19 @@
 }
 .videoSection .left button{
     border: none;
-    box-shadow: 0 0 15px var(--pink3);
-    font-size: var(--medium-text);
-    color:var(--pink1);
-    background-color: var(--white1);
     border-radius: 30px;
     padding: 10px 20px;
-    margin-left: 20px;
+    margin-left: 110px;
+    margin-top:  140px;
+    font-size: var(--medium-text);
+
+    color:var(--white1);
+
+    background-color: var(--primary-color);
 }
 .videoSection .frame{
     position: absolute;
-    margin-left: 780px;
+    margin-left: 740px;
     padding-top: 40px;
     
 }
@@ -134,11 +133,16 @@
     font-size: var(--medium-text);
 }
 
+.videoSection .frame h1{
+    color: var(--white1);
+    font-size: var(--medium-text);
+    margin-left: 60px;
+}
+
 .videoSection iframe{
-    border: 10px solid var(--pink2);
+
     border-radius: 30px;
 
-    box-shadow: 0 0 15px var(--pink3);
 }
 
 
@@ -157,11 +161,14 @@
     box-shadow: 0 0 15px var(--pink2);
 
     width: 800px;
+
+    border: solid 6px var(--primary-color);
 }
+
 
 .mission h2{
     font-size: var(--big-text);
-    color:var(--white1);
+    color:var(--primary-color);
     margin-left: 60px;
     margin-bottom: 15px;
 }
@@ -178,30 +185,40 @@
 }
 
 button.JoinClub{
-
     border: none;
-    box-shadow: 0 0 15px var(--pink3);
     font-size: var(--medium-text);
-    color:var(--white1);
-    background-color: var(--pink4);
     border-radius: 30px;
     padding: 10px 20px;
     margin-left: 20px;
+
+    color:var(--white1);
+    background-color: var(--secondary-color);
+
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+.JoinClub:hover {
+    background-color: var(--primary-color);
+    color: var(--white1);
+    transform: scale(1.05);
 }
 
 button.InviteFriend{
-    border: none;
-    box-shadow: 0 0 15px var(--pink3);
+    border: 4px solid var(--secondary-color);
     font-size: var(--medium-text);
-    color:var(--pink1);
-    background-color: var(--white1);
     border-radius: 30px;
     padding: 10px 20px;
     margin-left: 20px;
+
+    color:var(--secondary-color);
+    background-color: var(--white1);
+    transition: transform 0.5s ease, background-color 0.3s ease;
 }
 
 .InviteFriend:hover {
-    background-color: #ff3366;
+    background-color: var(--primary-color);
+    color: var(--white1);
+    border: 4px solid var(--primary-color);
+    transform: scale(1.05);
 }
-
 
