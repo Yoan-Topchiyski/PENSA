@@ -31,8 +31,8 @@ main {
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 18px;
-    border: none;
-    background-color: var(--primary-color);
+    border: 6px solid var(--white2);
+    background-color: var(--white2);
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -40,7 +40,7 @@ main {
 }
 
 .blocks button:hover {
-    background-color: #FF7043;
+    background-color: var(--primary-color);
 }
 
 
@@ -96,10 +96,6 @@ main {
     cursor: pointer;
     transition: background-color 0.3s;
 
-}
-
-.search-box button:hover {
-    background-color: #FF7043;
 }
 
 

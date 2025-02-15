@@ -419,6 +419,9 @@ button.okButton{
     margin-left: 24vw;
     position: relative;
 }
+.user .profil-text{
+    margin-left: 30px;
+}
 .user .profile-pic{
     width: 22vw;
 }
