@@ -14,6 +14,8 @@
     --dark-color: hsl(0, 0%, 20%);
     --light-color: hsl(0, 0%, 50%);
     --background-color: hsl(0, 0%, 96%);
+
+    --red:#d61c1c;
     
     --white80: hsl(0, 0%, 80%);
     --white1:hsl(0, 0%, 97%);
