@@ -20,9 +20,9 @@
     --white2:hsl(0, 0%, 95%);
     --white3:hsl(0, 0%, 90%);
     
-    --small-text: 1.4rem;
-    --medium-text: 1.9rem;
-    --big-text: 2.6rem;
+    --small-text: 2.4rem;
+    --medium-text: 2.8rem;
+    --big-text: 3rem;
 
     --screen-width-for-img: calc(100vh - 80px);
 
