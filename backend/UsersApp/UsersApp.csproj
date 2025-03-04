@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Remove="Views\Home.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Views\Profile\AddProduct.cshtml" />
+	  <None Include="Views\Home\Home.cshtml" />
+	  <None Include="Views\Profile\Profile.cshtml" />
+	  <None Include="wwwroot\css\home.css" />
+	  <None Include="wwwroot\css\loginstyless.css" />
+	  <None Include="wwwroot\css\styles.css" />
+	  <None Include="wwwroot\images\boxes.png" />
+	  <None Include="wwwroot\images\elder-people.png" />
+	  <None Include="wwwroot\images\footer.png" />
+	  <None Include="wwwroot\images\logo.png" />
+	  <None Include="wwwroot\images\logo1.png" />
+	  <None Include="wwwroot\images\people.png" />
+	  <None Include="wwwroot\images\profile-pic-woman.png" />
+	  <None Include="wwwroot\images\profile-pic-woman1.png" />
+	  <None Include="wwwroot\images\profile-pic.png" />
+	  <None Include="wwwroot\images\user-male.png" />
+	  <None Include="wwwroot\js\script.js" />
+	  <None Include="wwwroot\css\addproduct.css" />
+	  <None Include="wwwroot\images\bow.png" />
+	  <None Include="wwwroot\images\chair.png" />
+	  <None Include="wwwroot\images\pillow.png" />
+	  <None Include="wwwroot\css\profile.css" />
+	  <None Include="wwwroot\js\profilePage.js" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>
